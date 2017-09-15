@@ -1,10 +1,10 @@
 # ezfm_diarisation
 Fork from [ezfm_process](https://github.com/zhichenghou/ezfm_process)
 
-根据MFCC提取音频特征，训练[“飞鱼秀”](https://zaoaoaoaoao.com)音频节目语音和音乐的分类。
+根据MFCC提取音频特征，训练[“飞鱼秀”](http://zaoaoaoaoao.com)音频节目语音和音乐的分类。
 
 # Material
-[应用机器学习分类声音文件中的音乐和人声](https://houzhicheng.com/blog/ml/2015/04/03/machine-learning-audio-process.html)
+[应用机器学习分类声音文件中的音乐和人声](http://houzhicheng.com/blog/ml/2015/04/03/machine-learning-audio-process.html)
 
 # Preinstallation
 - [FFmpeg](https://ffmpeg.org)
