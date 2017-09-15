@@ -19,6 +19,7 @@ def convert(input_file):
         return wav_file
 
 def cut(input_file, delimit_points):
+	if len(delimit_points) <= 2: return
         name, suffix = split(input_file)
 	for i in range(0, len(delimit_points) - 1):
 		cmd = "ffmpeg -i " + input_file + " -acodec copy -ss " + str(delimit_points[i]) + " -to " + str(delimit_points[i + 1]) + " " + name + "_" + str(i) + "." + suffix

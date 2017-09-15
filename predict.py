@@ -7,7 +7,7 @@ import numpy as np
 import wave
 import mfcc
 
-def level(Yp, interval):
+def interval_size(Yp, interval):
 	last = Yp[0]
 	last_step = 0
 	for i in range(0, len(Yp)):
@@ -32,7 +32,7 @@ def window(Y, duration):
 			Yp[i] = 0
 
         # The interval of songs and speech should not be shorter than the window
-        level(Yp, time_window)
+        interval_size(Yp, time_window)
 	return Yp
 
 def run(input_wav, model):
