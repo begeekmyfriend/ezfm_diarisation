@@ -15,7 +15,7 @@ Fork from [ezfm_process](https://github.com/zhichenghou/ezfm_process)
 # Prediction
 > python run.py -p input_audio -m model/20160203c.pkl
 
-# Traing
+# Training
 > python run.py -t input_audio
 
-Note: 本程序不对“飞鱼秀”以外的音频节目预测正确率负责，如有需要请自行训练。
+本程序不对“飞鱼秀”以外的音频节目预测正确率负责，如有需要请自行训练。
