@@ -7,18 +7,22 @@ import numpy as np
 import wave
 import mfcc
 
+# smooth tiny interval
+# 1100000111000 --> 000000000000 (111 < interval)
+# 0011111000111 --> 111111111111 (000 < interval)
 def interval_size(Yp, interval):
 	last = Yp[0]
-	last_step = 0
+	start = 0
 	for i in range(0, len(Yp)):
 		if Yp[i] != last:
-			delta = i - last_step
+			delta = i - start
 			if delta < interval:
-				Yp[last_step:i] = Yp[i]
+				Yp[start:i] = Yp[i]
 			else:
-				last_step = i
+				start = i
 		last = Yp[i]
 
+# smooth error labels which occupy littlse in a window size
 def window(Y, duration):
 	time_window = duration / 60
         if time_window < 5:
